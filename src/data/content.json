@@ -1,0 +1,411 @@
+{
+  "hero": {
+    "name": "Garv",
+    "roles": [
+      "Software Developer",
+      "Full Stack Developer",
+      "AI Engineer",
+      "AI/ML Enthusiast"
+    ],
+    "bio": "A passionate developer building high-tech, scalable solutions. Transforming complex problems into elegant, user-centric interfaces and powerful backend systems.",
+    "status": "AVAILABLE FOR WORK",
+    "cta": "View Projects",
+    "profileImage": "profile.jpeg"
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I am a final year B.Tech CSE Student with a strong interest in AI/ML and Full Stack Development.",
+    "details": "My journey is defined by a curiosity to learn and apply new technologies. I enjoy building intelligent applications and exploring the depths of machine learning algorithms. I am eager to contribute to innovative projects and grow as a developer.",
+    "interests": [
+      {
+        "title": "Open Source",
+        "description": "Contributor",
+        "icon": "Code2"
+      },
+      {
+        "title": "AI/ML",
+        "description": "Exploration",
+        "icon": "Brain"
+      },
+      {
+        "title": "Tech Meetups",
+        "description": "Networking",
+        "icon": "Users"
+      },
+      {
+        "title": "Problem Solving",
+        "description": "Analytical",
+        "icon": "Lightbulb"
+      }
+    ]
+  },
+  "skills": {
+    "title": "My Skills",
+    "categories": [
+      "All",
+      "Languages",
+      "Web Development",
+      "Technology",
+      "Library/Frameworks"
+    ],
+    "items": [
+      {
+        "name": "Java",
+        "category": "Languages",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      },
+      {
+        "name": "Python",
+        "category": "Languages",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+      },
+      {
+        "name": "C++",
+        "category": "Languages",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+      },
+      {
+        "name": "JavaScript",
+        "category": "Languages",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "TypeScript",
+        "category": "Languages",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+      },
+      {
+        "name": "React",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "Next.js",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "Express",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+      },
+      {
+        "name": "Flask",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+      },
+      {
+        "name": "Django",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+      },
+      {
+        "name": "Spring Boot",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "category": "Web Development",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      },
+      {
+        "name": "Git",
+        "category": "Technology",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      },
+      {
+        "name": "Docker",
+        "category": "Technology",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "category": "Technology",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "category": "Technology",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "name": "TensorFlow",
+        "category": "Library/Frameworks",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+      },
+      {
+        "name": "PyTorch",
+        "category": "Library/Frameworks",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+      },
+      {
+        "name": "LangChain",
+        "category": "Library/Frameworks",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/5/53/LangChain_logo.png"
+      },
+      {
+        "name": "OpenCV",
+        "category": "Library/Frameworks",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Autonomous GitHub Issue Resolver",
+      "problem": "PLACEHOLDER \u2014 Open-source maintainers drown in repetitive issue triage and small fixes.",
+      "impact": "PLACEHOLDER \u2014 An autonomous AI agent that reads GitHub issues, plans a fix, edits code, and opens PRs.",
+      "description": "PLACEHOLDER PROJECT \u2014 details to be filled in when the project ships. An autonomous AI agent that resolves GitHub issues end-to-end.",
+      "tech": [
+        "Python",
+        "LangGraph",
+        "LLM Agents",
+        "GitHub API",
+        "RAG"
+      ],
+      "github": "#",
+      "demo": "#",
+      "placeholder": true
+    },
+    {
+      "title": "LLM Evaluation CI/CD Pipeline",
+      "problem": "PLACEHOLDER \u2014 LLM regressions ship silently without automated evaluation gates.",
+      "impact": "PLACEHOLDER \u2014 A CI/CD pipeline that runs eval suites on every change and blocks regressions before deploy.",
+      "description": "PLACEHOLDER PROJECT \u2014 details to be filled in when the project ships. An LLM evaluation pipeline integrated into CI/CD.",
+      "tech": [
+        "Python",
+        "LLM Evals",
+        "CI/CD",
+        "GitHub Actions",
+        "Prompt Testing"
+      ],
+      "github": "#",
+      "demo": "#",
+      "placeholder": true
+    },
+    {
+      "title": "Health-Intelligence-Agent",
+      "problem": "Medical report analysis needed an intelligent, multi-model approach for accurate health insights.",
+      "impact": "Enabled secure PDF ingestion and personalized health recommendations through cascading LLM models.",
+      "description": "Built an agent-based AI system for medical report analysis using a multi-model LLM cascade with fallback logic. Enabled PDF ingestion, personalized health insights, secure authentication, session tracking, and real-time UI using Streamlit and Supabase.",
+      "tech": [
+        "Python",
+        "Streamlit",
+        "Groq API",
+        "Meta LLaMA",
+        "LLaMA-4 Maverick",
+        "LLaMA-3.3-70B",
+        "LLaMA-3.1-8B",
+        "Multi-Model Cascade",
+        "Agent-Based Systems",
+        "Supabase",
+        "PostgreSQL",
+        "PDFPlumber"
+      ],
+      "github": "https://github.com/Garvity/Health-Intelligence",
+      "demo": "#"
+    },
+    {
+      "title": "Resume Analysis App",
+      "problem": "Job seekers needed a way to optimize resumes against job descriptions with actionable feedback.",
+      "impact": "Provided matching scores and insights to help candidates tailor applications effectively.",
+      "description": "An intelligent tool utilizing a RAG pipeline to analyze resumes against job descriptions. Provides actionable insights and matching scores to optimize job applications.",
+      "tech": [
+        "Streamlit",
+        "Python",
+        "LangChain",
+        "FAISS",
+        "PyPDF2"
+      ],
+      "github": "https://github.com/Garvity/Resume-Analysis-App-RAG-Pipeline-",
+      "demo": "#"
+    },
+    {
+      "title": "Plant Pal",
+      "problem": "Farmers needed quick, accurate plant disease detection without expert consultation.",
+      "impact": "Provided confidence-level predictions with prevention tips and product recommendations.",
+      "description": "End-to-end plant disease predictor using a tailored CNN model. Features confidence levels, prevention tips, cure recommendations, product links, and an NLP-powered chatbot assistant.",
+      "tech": [
+        "Flask",
+        "Python",
+        "TensorFlow",
+        "Keras",
+        "NLP",
+        "CNN"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/Plant%20AI%20Disease%20Classification",
+      "demo": "#"
+    },
+    {
+      "title": "Amazon Price Tracker",
+      "problem": "Users wanted real-time price tracking for boAt products with automatic notifications.",
+      "impact": "Automated price monitoring with instant email alerts when drops occurred.",
+      "description": "Automated price tracking bot for boAt products. Scrapes Amazon real-time using BeautifulSoup and alerts users via SMTP email notifications when prices drop.",
+      "tech": [
+        "HTMLParser",
+        "BeautifulSoup",
+        "Python",
+        "SMTP"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/Amazon%20Price%20Tracker",
+      "demo": "#"
+    },
+    {
+      "title": "Desktop Assistant",
+      "problem": "Users needed hands-free desktop control through voice commands.",
+      "impact": "Enabled seamless voice-activated automation for common desktop tasks.",
+      "description": "Voice-activated personal assistant for desktop automation. Performs tasks like opening applications, web browsing, and system control using speech recognition commands.",
+      "tech": [
+        "pyttsx3",
+        "Python",
+        "SpeechRecognition",
+        "OS",
+        "WebBrowser"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/Desktop%20Assistant",
+      "demo": "#"
+    },
+    {
+      "title": "Doctor Appointment System",
+      "problem": "Healthcare providers needed a digital solution for appointment booking and management.",
+      "impact": "Streamlined patient-doctor scheduling with secure authentication.",
+      "description": "Comprehensive MERN stack application for booking medical appointments. Features patient profiles, doctor availability management, and secure scheduling workflow.",
+      "tech": [
+        "React",
+        "Redux",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/Doctor-Appointment-System",
+      "demo": "#"
+    },
+    {
+      "title": "Smart File Organizer",
+      "problem": "Users had unorganized file systems that were hard to navigate.",
+      "impact": "Automated file categorization with detailed operation logging.",
+      "description": "Automates file organization by categorizing files into folders based on extensions or dates. Includes detailed logging for tracking operations.",
+      "tech": [
+        "Python",
+        "OS",
+        "Shutil",
+        "Logging",
+        "DateTime"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/File%20Organiser",
+      "demo": "#"
+    },
+    {
+      "title": "Stock Price Prediction App",
+      "problem": "Investors needed predictive models to forecast stock price trends.",
+      "impact": "Provided LSTM-based predictions with historical data visualization.",
+      "description": "Predicts stock prices using LSTM neural networks. Visualizes historical data and future trends with Matplotlib, utilizing Yahoo Finance for real-time data.",
+      "tech": [
+        "yfinance",
+        "Matplotlib",
+        "Pandas",
+        "TensorFlow",
+        "Keras",
+        "Python",
+        "LSTM"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/Stock%20Price%20Prediction/stock%20predict%20price%20prediction",
+      "demo": "#"
+    },
+    {
+      "title": "AI Virtual Keyboard",
+      "problem": "Users needed contactless input methods for touchless interaction.",
+      "impact": "Enabled gesture-based typing without physical keyboard.",
+      "description": "A contactless virtual keyboard utilizing computer vision to detect fingertip movements. Simulates keystrokes for typing without physical interaction.",
+      "tech": [
+        "OpenCV",
+        "Python",
+        "Cvzone",
+        "NumPy",
+        "Computer Vision"
+      ],
+      "github": "https://github.com/garvity/Done-Projects/tree/main/AI%20Virtual%20Keyboard",
+      "demo": "#"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Java Full Stack Intern",
+      "company": "Infosys Springboard 6.0",
+      "period": "December 2025 - Present",
+      "description": "Developing Localized Quick Services in React (frontend) and Java and Spring Boot (backend)."
+    },
+    {
+      "role": "Open Source Hackathon",
+      "company": "IEEE Summer of Code",
+      "period": "May 2025 - June 2025",
+      "description": "Secured 5th place by Contributing to open-source projects and gained experience in collaborative development."
+    },
+    {
+      "role": "AI/ML Intern",
+      "company": "Infosys Springboard 5.0",
+      "period": "December 2024 - January 2025",
+      "description": "Developed an End to End Application using AI/ML, deep learning CNN model for image classification of Plant Diseases with chatbot interface."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology (B.Tech)",
+      "school": "JNTU Kakinada",
+      "year": "2022 - 2026",
+      "description": "Specialization in Computer Science and Engineering"
+    },
+    {
+      "degree": "Intermediate",
+      "school": "Sri Chaitanya Junior College",
+      "year": "2020 - 2022",
+      "description": "Main Stream in Maths, Physics and Chemistry"
+    }
+  ],
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's Talk",
+    "message": "I'm always open to discussing new projects, creative ideas within tech or opportunities to be part of your visions.",
+    "email": "garvity375@gmail.com",
+    "phone": null,
+    "socials": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/garvity",
+        "label": "Check my Code"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/garvrc",
+        "label": "Connect Professionally"
+      },
+      {
+        "platform": "Email",
+        "url": "mailto:garvity375@gmail.com",
+        "label": "Contact Me"
+      }
+    ]
+  },
+  "resume": {
+    "filename": "resume.pdf",
+    "path": "assets/resume.pdf"
+  },
+  "metadata": {
+    "title": "Garv - Software Developer & AI Engineer",
+    "description": "Portfolio of Garv, a Full Stack Developer and AI Engineer showcasing projects, skills, and experience.",
+    "keywords": [
+      "Software Developer",
+      "AI Engineer",
+      "Full Stack",
+      "React",
+      "Python",
+      "Machine Learning"
+    ]
+  }
+}

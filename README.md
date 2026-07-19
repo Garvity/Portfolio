@@ -102,8 +102,14 @@ Works out of the box via a `mailto:` fallback. For in-page delivery, create a fr
 [EmailJS](https://www.emailjs.com) account, then:
 
 ```bash
-cp .env.example .env    # fill in the three VITE_EMAILJS_* keys
+cp .env.example .env    # fill in the VITE_EMAILJS_* keys
 ```
+
+Ready-made template HTML (styled to match the site) lives in
+[`docs/emailjs-template.html`](docs/emailjs-template.html) — paste it into the EmailJS
+code editor. Optionally add [`docs/emailjs-autoreply-template.html`](docs/emailjs-autoreply-template.html)
+as a second template and set `VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID` to send visitors an
+automatic confirmation email.
 
 ## ☁️ Deploy to Vercel
 

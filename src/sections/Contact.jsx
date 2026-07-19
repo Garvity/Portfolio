@@ -12,10 +12,14 @@ export default function Contact() {
   const form = useRef()
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
-  const hasEmailJs =
-    import.meta.env.VITE_EMAILJS_SERVICE_ID &&
-    import.meta.env.VITE_EMAILJS_TEMPLATE_ID &&
-    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  const {
+    VITE_EMAILJS_SERVICE_ID: serviceId,
+    VITE_EMAILJS_TEMPLATE_ID: templateId,
+    VITE_EMAILJS_PUBLIC_KEY: publicKey,
+    VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID: autoReplyTemplateId,
+  } = import.meta.env
+
+  const hasEmailJs = serviceId && templateId && publicKey
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -31,18 +35,28 @@ export default function Contact() {
       return
     }
 
+    // Captured before the form resets — used by the auto-reply below
+    const visitor = {
+      name: data.get('name'),
+      email: data.get('email'),
+      subject: data.get('subject'),
+    }
+
     setStatus('sending')
     emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        form.current,
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY },
-      )
+      .sendForm(serviceId, templateId, form.current, { publicKey })
       .then(() => {
         setStatus('sent')
         form.current?.reset()
         setTimeout(() => setStatus('idle'), 5000)
+
+        // Fire-and-forget confirmation email to the visitor — a failure
+        // here should never affect the "Sent!" state they already saw.
+        if (autoReplyTemplateId) {
+          emailjs
+            .send(serviceId, autoReplyTemplateId, visitor, { publicKey })
+            .catch(() => {})
+        }
       })
       .catch(() => {
         setStatus('error')

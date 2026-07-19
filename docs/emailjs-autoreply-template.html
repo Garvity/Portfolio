@@ -1,0 +1,72 @@
+<!--
+  OPTIONAL second EmailJS template: auto-reply sent to the visitor.
+  Create it as a separate template, then in the Auto-Reply section of your
+  main template settings, link this one — or send it via a second
+  emailjs.send() call.
+
+  SETTINGS for this template:
+    To Email:  {{email}}          ← the visitor
+    From Name: Garv
+    Subject:   Thanks for reaching out — I got your message ⚡
+    Reply To:  garvity375@gmail.com
+-->
+<div style="margin:0;padding:0;background-color:#05060f;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#05060f;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background-color:#0a0d1f;border:1px solid #1e293b;border-radius:16px;overflow:hidden;">
+
+          <tr>
+            <td style="background:linear-gradient(90deg,#38bdf8,#a78bfa);height:4px;font-size:0;line-height:0;">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td style="padding:28px 32px 8px 32px;">
+              <p style="margin:0;font-family:'Courier New',monospace;color:#22d3ee;font-size:13px;letter-spacing:2px;">
+                garv@portfolio:~$ <span style="color:#94a3b8;">message_received ✓</span>
+              </p>
+              <h1 style="margin:12px 0 0 0;color:#f8fafc;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:bold;">
+                Hey {{name}}, thanks for reaching out! 👋
+              </h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:16px 32px 0 32px;font-family:Arial,Helvetica,sans-serif;">
+              <p style="margin:0;color:#cbd5e1;font-size:15px;line-height:1.7;">
+                Your message about "<strong style="color:#38bdf8;">{{subject}}</strong>" just landed in my inbox.
+                I read everything personally and I'll get back to you within 24–48 hours.
+              </p>
+              <p style="margin:16px 0 0 0;color:#cbd5e1;font-size:15px;line-height:1.7;">
+                In the meantime, feel free to check out my work:
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px 32px;" align="center">
+              <a href="https://github.com/garvity"
+                 style="display:inline-block;background-color:#0f172a;border:1px solid #38bdf8;color:#38bdf8;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;text-decoration:none;padding:10px 24px;border-radius:999px;margin:0 6px 8px 6px;">
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/garvrc"
+                 style="display:inline-block;background-color:#0f172a;border:1px solid #a78bfa;color:#a78bfa;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;text-decoration:none;padding:10px 24px;border-radius:999px;margin:0 6px 8px 6px;">
+                LinkedIn
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:0 32px 24px 32px;border-top:1px solid #1e293b;" align="center">
+              <p style="margin:16px 0 0 0;font-family:'Courier New',monospace;font-size:11px;color:#475569;">
+                2026@garv — Built with Passion<br/>
+                Designing. Developing. Deploying.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

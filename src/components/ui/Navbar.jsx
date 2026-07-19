@@ -41,6 +41,17 @@ export default function Navbar() {
 
   return (
     <>
+      {/* ---- Desktop logo (top-left) ---- */}
+      <motion.a
+        href="#hero"
+        initial={{ y: -60, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.7, ease: 'easeOut' }}
+        className="glass fixed top-4 left-6 z-50 hidden rounded-full px-5 py-2.5 font-display text-lg font-bold text-white md:block"
+      >
+        Garvity<span className="neon-text">.</span>
+      </motion.a>
+
       {/* ---- Desktop pill nav ---- */}
       <motion.nav
         initial={{ y: -60, opacity: 0 }}
@@ -78,7 +89,7 @@ export default function Navbar() {
         className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-4 py-3 md:hidden"
       >
         <a href="#hero" className="glass rounded-full px-4 py-2 font-display text-sm font-bold text-white">
-          G<span className="neon-text">.</span>
+          Garvity<span className="neon-text">.</span>
         </a>
         <button
           onClick={() => setOpen(true)}
@@ -101,7 +112,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between px-4 py-3">
               <span className="glass rounded-full px-4 py-2 font-display text-sm font-bold text-white">
-                G<span className="neon-text">.</span>
+                Garvity<span className="neon-text">.</span>
               </span>
               <button
                 onClick={() => setOpen(false)}

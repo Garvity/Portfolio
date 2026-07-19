@@ -1,84 +1,147 @@
-# Garv — 3D Immersive Portfolio
+<div align="center">
 
-A scroll-driven, 3D immersive single-page portfolio built with **React Three Fiber**, **GSAP ScrollTrigger**, **Framer Motion**, and **Tailwind CSS**.
+# ⚡ Garv — 3D Immersive Portfolio
 
-The camera travels along a 3D path through six scenes — a neural-mesh hero, an orbiting globe, an instanced skill grid, a project "gate corridor" the camera dollies through, a timeline helix, and a floating terminal — all choreographed by scroll position.
+**Software Developer · Full Stack Developer · AI Engineer**
 
-## Architecture
+A scroll-driven, 3D immersive portfolio where the camera travels through a neon world —
+built to show, not just tell.
+
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&labelColor=0a0d1f)](https://react.dev)
+[![Three.js](https://img.shields.io/badge/Three.js-R3F-000000?logo=three.js&logoColor=white&labelColor=0a0d1f)](https://docs.pmnd.rs/react-three-fiber)
+[![GSAP](https://img.shields.io/badge/GSAP-ScrollTrigger-88CE02?logo=greensock&logoColor=white&labelColor=0a0d1f)](https://gsap.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8?logo=tailwindcss&logoColor=white&labelColor=0a0d1f)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white&labelColor=0a0d1f)](https://vitejs.dev)
+[![Deployed on Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white&labelColor=0a0d1f)](https://vercel.com)
+
+🔗 **[Live Demo](#)** · 📄 **[Resume](public/resume.pdf)** · 💼 **[LinkedIn](https://linkedin.com/in/garvrc)** · 🐙 **[GitHub](https://github.com/garvity)**
+
+</div>
+
+---
+
+## 🎥 The Experience
+
+This isn't a page you scroll — it's a world you travel through. A single camera flies along a
+3D path across six scenes, choreographed frame-by-frame by your scroll position:
+
+| Scene | What happens |
+|---|---|
+| 🧠 **Hero** | A mouse-reactive neural-network mesh with glitch typography and typewriter roles |
+| 🌐 **About** | A wireframe globe that spins as you scroll, orbited by floating tech shapes |
+| ⬡ **Skills** | 21 skills in an interactive hex grid over a field of breathing 3D orbs |
+| 🚀 **Projects** | The camera dollies through glowing gate rings — one per project, 11 in total |
+| 🛤️ **Journey** | A timeline whose spine draws itself in as a 3D helix energizes alongside |
+| 📡 **Contact** | A floating wireframe terminal with an orbiting mail glyph and working contact form |
+
+Everything runs on a dark neon aesthetic — electric blue & purple, glassmorphism cards,
+smooth `power2/power3` easing, zero scroll-jank.
+
+## 👋 About Me
+
+Final-year **B.Tech CSE student** passionate about **AI/ML and Full Stack Development** —
+building intelligent applications end-to-end, from multi-model LLM cascades and RAG
+pipelines to production MERN apps.
+
+- 🔭 Currently: **Java Full Stack Intern @ Infosys Springboard 6.0**
+- 🏆 5th place — **IEEE Summer of Code** open-source hackathon
+- 🌱 Deep-diving into **LLM engineering, LangChain/LangGraph, and agentic AI**
+- 💬 Reach me: **garvity375@gmail.com**
+
+## 🛠️ Engineering Highlights
+
+Things under the hood I'm proud of:
+
+- **Zero React re-renders on scroll.** GSAP ScrollTrigger writes progress into a shared
+  mutable module; the R3F render loop reads it every frame. The DOM and canvas never
+  fight over state.
+- **A real 3D camera path.** Section positions thread a Catmull-Rom curve; scroll progress
+  parameterizes it, mouse position adds parallax, and a damped follow keeps motion buttery.
+- **Instancing everywhere.** 1,400 particles and a 28-orb grid cost 2 draw calls total.
+- **Mobile-aware degradation.** Lower DPR, 400 particles, no antialiasing, low-poly rings —
+  detected via `matchMedia`, no user agent sniffing.
+- **Content/presentation decoupling.** Every word on the site lives in
+  [`src/data/content.json`](src/data/content.json). Swap the data, keep the world.
+- **Resilient loading screen.** Pure-CSS fade-out that completes even in backgrounded tabs
+  (rAF-driven exit animations freeze when `document.hidden` — this one doesn't).
+
+## 📂 Project Structure
 
 ```
 src/
-├── data/
-│   └── content.json          ← SINGLE SOURCE OF TRUTH for all text/links.
-│                               Edit this file to change any content — no
-│                               component code changes needed.
-├── lib/
-│   └── scrollState.js        ← Shared mutable scroll state. GSAP writes it,
-│                               the R3F canvas reads it every frame (zero
-│                               React re-renders on scroll).
-├── hooks/
-│   ├── useIsMobile.js        ← Mobile fallback (lower DPR, fewer particles)
-│   └── useTypewriter.js      ← Hero role typewriter
+├── data/content.json         ← Single source of truth for ALL content
+├── lib/scrollState.js        ← GSAP ↔ R3F bridge (mutable, render-loop-read)
+├── hooks/                    ← useIsMobile, useTypewriter
 ├── components/
-│   ├── three/                ← All R3F scenes (lazy-loaded via React.lazy)
+│   ├── three/                ← 3D scenes (lazy-loaded)
 │   │   ├── MainCanvas.jsx    ← Canvas, lights, fog, scene registry
-│   │   ├── CameraRig.jsx     ← Catmull-Rom camera path driven by scroll
-│   │   ├── ParticleField.jsx ← One instanced Points cloud along the path
-│   │   ├── NeuralMesh.jsx    ← Hero: node/edge network + wireframe core
-│   │   ├── AboutGlobe.jsx    ← About: scroll-spinning globe + Float shapes
-│   │   ├── SkillOrbs.jsx     ← Skills: instanced breathing orb grid
-│   │   ├── ProjectsScene.jsx ← Projects: torus gates, camera dolly corridor
-│   │   ├── JourneyScene.jsx  ← Timeline helix + energizing beam
-│   │   └── ContactScene.jsx  ← Wireframe terminal + orbiting mail glyph
-│   └── ui/                   ← Loading screen, navbar, headings, footer
-└── sections/                 ← DOM layer (glassmorphism cards over canvas)
+│   │   ├── CameraRig.jsx     ← Catmull-Rom camera path + mouse parallax
+│   │   └── ...one file per scene
+│   └── ui/                   ← Loading screen, navbar, section chrome
+└── sections/                 ← DOM layer (glass cards over the canvas)
 ```
 
-### How the scroll ↔ 3D binding works
-
-- Each section's arrival at the viewport top is a **scrubbed GSAP ScrollTrigger** writing `0→1` progress into `scrollState.transitions[i]`.
-- The sum of those transitions is a float "which section are we at" that parameterizes a **Catmull-Rom curve** the camera follows (`CameraRig.jsx`).
-- The tall projects section additionally writes `projectsProgress`, which dollies the camera through the project gates.
-- Mouse position feeds a parallax offset on top of the path.
-
-## Setup
+## 🚀 Quick Start
 
 ```bash
+git clone <this-repo>
+cd New-3D-portfolio
 npm install
-npm run dev        # http://localhost:5173
+npm run dev          # → http://localhost:5173
 ```
 
-> **Note:** `npm install` requires registry access. On the machine this was
-> authored on, `registry.npmjs.org` was blocked by a network proxy allowlist,
-> so dependencies could not be installed or the build verified there. Run the
-> install on a machine with normal npm access — no other steps are needed.
-
-### Contact form (optional)
-
-The form works out of the box by opening the visitor's mail client. For
-in-page delivery, create a free [EmailJS](https://www.emailjs.com) account and
-copy `.env.example` → `.env` with your keys.
-
-## Deploy to Vercel
+Production build & preview:
 
 ```bash
-npm i -g vercel && vercel        # or connect the repo in the Vercel dashboard
+npm run build && npm run preview
 ```
 
-`vercel.json` is preconfigured (Vite framework, `dist` output, SPA rewrite).
-Add the three `VITE_EMAILJS_*` env vars in the Vercel dashboard if you use
-EmailJS.
+### 📬 Contact form (optional)
 
-## Performance notes
+Works out of the box via a `mailto:` fallback. For in-page delivery, create a free
+[EmailJS](https://www.emailjs.com) account, then:
 
-- 3D canvas is `React.lazy`-loaded behind `Suspense`; the loading screen is pure CSS.
-- Particles and skill orbs are **instanced** (2 draw calls total).
-- Mobile: DPR capped at 1.25, ~400 particles instead of 1400, antialias off, low-poly gate rings.
-- `fog` + tight camera `far` plane keep overdraw down; geometry is all primitives (no model downloads).
-- `powerPreference: 'high-performance'`, damped camera easing (`power2`-style), `useFrame` only in components that animate.
+```bash
+cp .env.example .env    # fill in the three VITE_EMAILJS_* keys
+```
 
-## Content editing
+## ☁️ Deploy to Vercel
 
-Everything — name, bio, skills, projects, experience, education, socials — lives in `src/data/content.json`. Two projects (**Autonomous GitHub Issue Resolver**, **LLM Evaluation CI/CD Pipeline**) are flagged `"placeholder": true` and render an "IN DEVELOPMENT" badge; replace their `description/github/demo` fields when they ship, and delete the flag.
+One-click: import the repo at [vercel.com/new](https://vercel.com/new) — `vercel.json` is
+preconfigured (Vite, `dist` output, SPA rewrites). Or from the CLI:
 
-Resume: replace `public/resume.pdf`.
+```bash
+npm i -g vercel && vercel
+```
+
+Add the `VITE_EMAILJS_*` env vars in the Vercel dashboard if you use EmailJS.
+
+## ✏️ Customizing Content
+
+All text, links, skills, projects, and timeline entries live in
+**`src/data/content.json`** — edit it and the site updates, no component changes needed.
+
+- Two upcoming projects (*Autonomous GitHub Issue Resolver*, *LLM Evaluation CI/CD
+  Pipeline*) are flagged `"placeholder": true` and show an amber **IN DEVELOPMENT**
+  badge. Fill in their details and remove the flag when they ship.
+- Replace `public/resume.pdf` with your latest resume — the download button picks it up.
+
+## ⚡ Performance Checklist
+
+- [x] `React.lazy` + `Suspense` around the entire 3D canvas
+- [x] Instanced particles & orbs, primitive geometry only (no model downloads)
+- [x] Fog + tight far-plane to cap overdraw
+- [x] DPR clamping and per-device complexity scaling
+- [x] Manual chunk splitting (`three` / `motion` / app) for cacheable bundles
+- [x] `useFrame` only in components that actually animate
+
+---
+
+<div align="center">
+
+**Built from scratch with React Three Fiber, GSAP & Tailwind — no templates.**
+
+If you're hiring for Software Development / AI Engineering roles, let's talk:
+**[garvity375@gmail.com](mailto:garvity375@gmail.com)**
+
+</div>

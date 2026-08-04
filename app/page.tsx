@@ -204,6 +204,19 @@ export default function Home() {
       return !value;
     });
   };
+  const navigateTo = (id: string) => (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (id !== "contact") {
+      setMenuOpen(false);
+      return;
+    }
+    event.preventDefault();
+    setMenuOpen(false);
+    const heading = document.querySelector<HTMLElement>("#contact .section-heading");
+    if (heading) {
+      window.history.replaceState(null, "", "#contact");
+      window.scrollTo({ top: heading.getBoundingClientRect().top + window.scrollY - 92, behavior: "smooth" });
+    }
+  };
 
   return (
     <main className={themeClass}>
@@ -215,11 +228,11 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Garv home"><span className="brand-mark"><Code2 size={16} /></span><span>garv<span className="brand-dot">.</span>dev</span></a>
         <nav className={`desktop-nav ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
-          {navItems.map((item) => <a key={item} href={`#${item}`} className={active === item ? "active" : ""} onClick={() => setMenuOpen(false)}>{item}</a>)}
+          {navItems.map((item) => <a key={item} href={`#${item}`} className={active === item ? "active" : ""} onClick={navigateTo(item)}>{item}</a>)}
         </nav>
         <div className="header-actions">
           <button className="icon-btn" aria-label="Toggle theme" onClick={toggleTheme}>{dark ? <Sun size={17} /> : <Moon size={17} />}</button>
-          <a className="header-cta" href="#contact">Let&apos;s talk <ArrowUpRight size={15} /></a>
+          <a className="header-cta" href="#contact" onClick={navigateTo("contact")}>Let&apos;s talk <ArrowUpRight size={15} /></a>
           <button className="menu-btn icon-btn" aria-label="Toggle menu" onClick={() => setMenuOpen((v) => !v)}>{menuOpen ? <X size={19} /> : <Menu size={19} />}</button>
         </div>
       </header>
@@ -230,7 +243,7 @@ export default function Home() {
           <p className="hero-kicker">Java developer · Full stack developer · AI engineer</p>
           <h1>I turn complex ideas<br /><em>into useful systems.</em></h1>
           <p className="hero-intro">I&apos;m Garv R Changrani — a final-year Computer Science student building secure Java backends, full-stack products, and practical AI/ML systems.</p>
-          <div className="hero-actions"><a className="button button-primary" href="#projects">View projects <ArrowDownRight size={16} /></a><a className="button button-ghost" href="mailto:garvity375@gmail.com">Contact me <Mail size={16} /></a><a className="hero-social" href="https://github.com/garvity" target="_blank" rel="noreferrer" aria-label="Visit Garv's GitHub profile" title="GitHub"><Github size={19} /></a><a className="hero-social" href="https://linkedin.com/in/garvrc" target="_blank" rel="noreferrer" aria-label="Visit Garv's LinkedIn profile" title="LinkedIn"><Linkedin size={19} /></a></div>
+          <div className="hero-actions"><a className="button button-primary" href="#projects">View projects <ArrowDownRight size={16} /></a><a className="button button-ghost" href="mailto:garvity375@gmail.com">Contact me <Mail size={16} /></a><a className="button button-ghost" href="/Resume-GarvRC.pdf" target="_blank" rel="noreferrer" aria-label="Open Garv's resume">Resume <Download size={16} /></a><a className="hero-social" href="https://github.com/garvity" target="_blank" rel="noreferrer" aria-label="Visit Garv's GitHub profile" title="GitHub"><Github size={19} /></a><a className="hero-social" href="https://linkedin.com/in/garvrc" target="_blank" rel="noreferrer" aria-label="Visit Garv's LinkedIn profile" title="LinkedIn"><Linkedin size={19} /></a></div>
           <div className="hero-meta"><span>Currently building with <strong>Java · Spring Boot · React</strong></span><span className="meta-divider" /><a href="mailto:garvity375@gmail.com">garvity375@gmail.com <ArrowUpRight size={13} /></a></div>
         </motion.div>
 
